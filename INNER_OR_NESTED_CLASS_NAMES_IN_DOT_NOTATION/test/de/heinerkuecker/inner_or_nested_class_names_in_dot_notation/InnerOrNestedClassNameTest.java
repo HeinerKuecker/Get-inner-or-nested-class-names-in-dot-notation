@@ -36,7 +36,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Inner";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Inner";
 
         Assert.assertEquals(
                 expected ,
@@ -56,7 +56,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Inner.InnerInner";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Inner.InnerInner";
 
         Assert.assertEquals(
                 expected ,
@@ -76,7 +76,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Inner.InnerNested";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Inner.InnerNested";
 
         Assert.assertEquals(
                 expected ,
@@ -109,7 +109,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Nested";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Nested";
 
         Assert.assertEquals(
                 expected ,
@@ -129,7 +129,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Nested.NestedInner";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Nested.NestedInner";
 
         Assert.assertEquals(
                 expected ,
@@ -149,7 +149,7 @@ public class InnerOrNestedClassNameTest
         //System.out.println( actual );
 
         final String expected =
-                "de.heinerkuecker.class_with_generics_to_str.InnerOrNestedClassNameTest.Nested.NestedNested";
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Nested.NestedNested";
 
         Assert.assertEquals(
                 expected ,
