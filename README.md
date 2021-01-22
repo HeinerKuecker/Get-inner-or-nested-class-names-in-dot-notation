@@ -8,7 +8,7 @@ Leider gibt die Methode getName der Klasse 'Class' den  Namen der Klasse auch mi
 
 Unfortunately, the getName method of the 'Class' class also returns the name of the class with a dollar sign as a separator and not as the name is written in the Java source code, separated by dots.
 
-Diese kleines Java-Klasse gibt den Namen von inneren und geschachtelten Klassen per Reflektion in der erwarteten Punkt-Schreibweise zurück.
+Diese kleine Java-Klasse gibt den Namen von inneren und geschachtelten Klassen per Reflektion in der erwarteten Punkt-Schreibweise zurück.
 
 This little Java class returns the names of inner and nested classes by reflection in the expected dot notation.
 
