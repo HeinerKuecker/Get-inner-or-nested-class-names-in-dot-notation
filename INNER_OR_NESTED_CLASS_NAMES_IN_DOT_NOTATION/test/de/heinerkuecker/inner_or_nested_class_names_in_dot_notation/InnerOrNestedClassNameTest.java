@@ -1,5 +1,7 @@
 package de.heinerkuecker.inner_or_nested_class_names_in_dot_notation;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -150,6 +152,59 @@ public class InnerOrNestedClassNameTest
 
         final String expected =
                 "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.Nested.NestedNested";
+
+        Assert.assertEquals(
+                expected ,
+                actual );
+    }
+
+    /**
+     * Test for method {@link TypeParameterToStr#innerOrNestedClassName(Class<?>)}
+     */
+    @Test
+    public void testInnerOrNestedClassName_Anonymous()
+    {
+        @SuppressWarnings("serial")
+        ArrayList<String> anonymous =
+                new ArrayList<String>()
+        {
+            // no implementation
+        };
+
+        final String actual =
+                InnerOrNestedClassName.innerOrNestedClassName(
+                        anonymous.getClass() );
+
+        //System.out.println( actual );
+
+        final String expected =
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.1";
+
+        Assert.assertEquals(
+                expected ,
+                actual );
+    }
+
+    /**
+     * Test for method {@link TypeParameterToStr#innerOrNestedClassName(Class<?>)}
+     */
+    @Test
+    public void testInnerOrNestedClassName_Local()
+    {
+        class Local
+        extends ArrayList<String>
+        {
+            // no implementation
+        }
+
+        final String actual =
+                InnerOrNestedClassName.innerOrNestedClassName(
+                        Local.class );
+
+        System.out.println( actual );
+
+        final String expected =
+                "de.heinerkuecker.inner_or_nested_class_names_in_dot_notation.InnerOrNestedClassNameTest.1Local";
 
         Assert.assertEquals(
                 expected ,

@@ -20,7 +20,7 @@ public class InnerOrNestedClassName
     public static String innerOrNestedClassName(
             final Class<?> clazz )
     {
-        if ( clazz.isAnonymousClass() ||
+        if ( //clazz.isAnonymousClass() ||
                 clazz.isSynthetic() )
         {
             throw new IllegalArgumentException( String.valueOf( clazz ) );
@@ -72,7 +72,24 @@ public class InnerOrNestedClassName
 
         innerOrNestedClassNameBuff.append( enclosingClassNamesBuff.toString() );
 
-        innerOrNestedClassNameBuff.append( clazz.getSimpleName() );
+        if ( clazz.isAnonymousClass() ||
+                clazz.isLocalClass() )
+        {
+            final String anonymousOrLocalClassRawName = clazz.getName();
+
+            //System.out.println( anonymousOrLocalClassRawName );
+
+            final String anonymousOrLocalClassSimpleName =
+                    anonymousOrLocalClassRawName.substring(
+                    //beginIndex
+                    anonymousOrLocalClassRawName.lastIndexOf( '$' ) + 1 );
+
+            innerOrNestedClassNameBuff.append( anonymousOrLocalClassSimpleName );
+        }
+        else
+        {
+            innerOrNestedClassNameBuff.append( clazz.getSimpleName() );
+        }
 
         return innerOrNestedClassNameBuff.toString();
     }
