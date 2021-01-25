@@ -20,8 +20,7 @@ public class InnerOrNestedClassName
     public static String innerOrNestedClassName(
             final Class<?> clazz )
     {
-        if ( //clazz.isAnonymousClass() ||
-                clazz.isSynthetic() )
+        if ( clazz.isSynthetic() )
         {
             throw new IllegalArgumentException( String.valueOf( clazz ) );
         }
