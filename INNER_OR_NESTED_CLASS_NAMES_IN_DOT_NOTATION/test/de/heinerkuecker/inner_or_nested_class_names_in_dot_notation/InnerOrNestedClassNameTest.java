@@ -191,6 +191,7 @@ public class InnerOrNestedClassNameTest
     @Test
     public void testInnerOrNestedClassName_Local()
     {
+        @SuppressWarnings("serial")
         class Local
         extends ArrayList<String>
         {
