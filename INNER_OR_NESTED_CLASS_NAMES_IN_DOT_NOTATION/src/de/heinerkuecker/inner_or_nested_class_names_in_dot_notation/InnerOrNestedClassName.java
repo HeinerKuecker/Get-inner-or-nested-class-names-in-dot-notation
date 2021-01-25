@@ -14,7 +14,7 @@ public class InnerOrNestedClassName
      *
      * Method for displaying the names of inner and nested classes in Java dot notation.
      *
-     * @param clazz clazz to display as string
+     * @param clazz class to display name as string
      * @return string in Java dot notation
      */
     public static String innerOrNestedClassName(
