@@ -165,7 +165,7 @@ public class InnerOrNestedClassNameTest
     public void testInnerOrNestedClassName_Anonymous()
     {
         @SuppressWarnings("serial")
-        ArrayList<String> anonymous =
+        final ArrayList<String> anonymous =
                 new ArrayList<String>()
         {
             // no implementation
